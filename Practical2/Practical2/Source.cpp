@@ -14,8 +14,8 @@ public: //Access specifier
 	void sub(Fraction, Fraction);
 	void mult(Fraction, Fraction);
 	void div(Fraction, Fraction);
-	void setValues();
-
+	void setNumDenom();
+	void print();
 
 
 	Fraction() //Default constructor
@@ -28,7 +28,11 @@ public: //Access specifier
 
 	}
 
-	void setNumDenom()
+};
+
+	
+
+	void Fraction::setNumDenom()
 	{
 		cout << "Please enter a numerator: " << endl;
 		cin >> num;
@@ -46,23 +50,29 @@ public: //Access specifier
 		cout << a.num << "/" << a.den << endl;
 	}
 
-	void add(Fraction A, Fraction B)
+	void Fraction::add(Fraction A, Fraction B)
 	{
 		num = (A.num*B.den) + (B.num*A.den);
 		den = A.den*B.den;
 	}
 
-};
+
+
+
 
 int main()
 {
 	Fraction one; //Fraction object created
 	Fraction two;
+	Fraction three;
+	Fraction four;
+	Fraction five;
 
 	one.setNumDenom;
 	two.setNumDenom;
-	one.print;
-	two.print;
+	three.add(one, two);
+	one.print();
+	//two.print;
 }
 
 
